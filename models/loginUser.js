@@ -15,7 +15,7 @@ module.exports = (req, res, data) => {
       console.log(user.password);
       bcrypt.compare(password, user.password, (err, result) => {
         if (result) {
-          res.send('successfull');
+          res.redirect('/userDashboard');
         } else {
           res.send('Password is not correct');
         }
