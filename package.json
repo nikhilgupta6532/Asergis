@@ -1,11 +1,14 @@
 {
   "name": "nikhilnodejsdeveloper-master",
   "version": "1.0.0",
-  "description": "version 1. 1. This project uses mongodb on default port. 2. Run node ./bin/www or pm2 start ./bin/www 3. Login url http://localhost:3000/users/login",
+  "description":
+    "version 1. 1. This project uses mongodb on default port. 2. Run node ./bin/www or pm2 start ./bin/www 3. Login url http://localhost:3000/users/login",
   "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node server.js"
+    "start": "node server.js",
+    "test": "mocha server/**/*.test.js",
+    "test-watch": "nodemon --exec 'npm test'"
   },
   "author": "",
   "license": "ISC",
